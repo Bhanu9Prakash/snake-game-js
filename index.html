@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 id="snake-game" class="game-title">SNAKE GAME</h1>
+            <svg id="infoIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+        </div>
+
+        <!-- Moved score container here -->
+        <div class="score-container">
+            <p>Score: <span id="score">0</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
+        </div>
+
+        <div class="game-board-container">
+            <div id="gameBoard" class="game-board"></div>
+            <div id="gameOverOverlay" class="overlay">
+                <div class="overlay-content">
+                    <h2>GAME OVER</h2>
+                    <p>Your score: <span id="finalScore"></span></p>
+                    <div id="congratsMessage" class="congrats">NEW HIGH SCORE!</div>
+                    <button id="restartButton" class="start-button">RESTART</button>
+                </div>
+            </div>
+            <div id="pauseOverlay" class="overlay">
+                <div class="overlay-content">
+                    <h2>PAUSED</h2>
+                    <p>Press P to resume</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <button id="startButton" class="start-button">START</button>
+            <button id="resetHighScore" class="reset-button">Reset High Score</button>
+        </div>
+    </div>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to Snake Game!</h2>
+            <p>Press START or ENTER to begin the game</p>
+            <button id="welcomeStartButton" class="start-button">START</button>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Controls</h2>
+            <p>↑ : Move Up</p>
+            <p>↓ : Move Down</p>
+            <p>← : Move Left</p>
+            <p>→ : Move Right</p>
+            <p>P : Pause/Resume Game</p>
+            <p>Enter : Start/Restart Game</p>
+            <button id="closeInfoModal" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
