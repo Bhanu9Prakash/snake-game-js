@@ -2,6 +2,12 @@
 
 A classic Snake game implemented in HTML, CSS, and JavaScript.
 
+https://bhanu9prakash.github.io/snake-game-js
+
+![image](https://github.com/user-attachments/assets/e3bd79cd-2a67-475d-92f2-3632a9d4d0fa)
+
+
+
 ## Features
 
 - Responsive design for both desktop and mobile devices
